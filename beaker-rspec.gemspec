@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'yard'
   s.add_development_dependency 'thin'
 
-  if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.2.0')
+  if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.2.2')
     s.add_development_dependency 'rack', '~> 1.6'
   end
 
