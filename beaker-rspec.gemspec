@@ -28,6 +28,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'yard'
   s.add_development_dependency 'thin'
 
+  if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.2.0')
+    s.add_development_dependency 'rack', '~> 1.6'
+  end
+
   # Run time dependencies
   s.add_runtime_dependency 'beaker', '~> 3.0'
   s.add_runtime_dependency 'rspec', '~> 3.0'
